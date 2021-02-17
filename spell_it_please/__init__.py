@@ -2,7 +2,6 @@ from playsound import playsound
 from youdao import YouDao
 import random
 import os
-import time
 
 
 print('Initializing....')
@@ -17,19 +16,17 @@ with open('source.txt') as file_object:
         else:
             yd.download()
 with open("forget.md", 'w') as forget:
-    forget.write('|   Correct  |   My    |\n')
+    forget.write('|   CORRECT  |   MY    |\n')
     forget.write('|:----------:|:-------:|\n')
     print('Finish initializing and enjoy by yourself ^_____^')
-    playsound('start.mp3')
-    playsound('du~.mp3')
-    time.sleep(1)
     while len(words) != 0:
         index = random.randint(0, len(words) - 1)
         path = os.path.join(yd.get_dir(), words[index] + '.mp3')
         try:
             playsound(path)
         except UnicodeError:
-            print(path)
+            del words[index]
+            continue
         word = input("If you forget, just 'x': ")
         if word == words[index]:
             pass
@@ -38,6 +35,5 @@ with open("forget.md", 'w') as forget:
         else:
             forget.write('|' + words[index] + '|' + word + '|\n')
         del words[index]
-
 
 playsound('victory.mp3')

@@ -1,10 +1,9 @@
-import playsound
 import os
 import urllib.request
 
 
 class YouDao():
-    def __init__(self, type = 0, word='hellow'):
+    def __init__(self, type=0, word='hellow'):
         word = word.lower()
         self._type = type
         self._word = word
@@ -43,7 +42,10 @@ class YouDao():
         tmp = self.get_file_path()
         if tmp is None:
             self.set_url()
-            urllib.request.urlretrieve(self._url, filename=self._filePath)
+            try:
+                urllib.request.urlretrieve(self._url, filename=self._filePath)
+            except Exception:
+                print('Warning cannot download: ' + self._word)
 
         return self._filePath
 
@@ -52,10 +54,6 @@ class YouDao():
         # http://dict.youdao.com/dictvoice?type=0&audio=
         self._url = r'http://dict.youdao.com/dictvoice?type=' + str(
             self._type) + r'&audio=' + self._word
-
-
-    def get_url(self):
-        return self._url
 
     def get_file_path(self):
         self._fileName = self._word + '.mp3'
