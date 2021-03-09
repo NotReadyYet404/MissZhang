@@ -1,5 +1,6 @@
 from playsound import playsound
 from youdao import YouDao
+import translation
 import random
 import os
 
@@ -33,7 +34,8 @@ with open("forget.md", 'w') as forget:
         elif word == 'x':
             continue
         else:
-            forget.write('|' + words[index] + '|' + word + '|\n')
+            trans = translation.trans(words[index])
+            forget.write('|' + words[index] + '|' + trans + '|\n')
         del words[index]
 
 playsound('victory.mp3')
