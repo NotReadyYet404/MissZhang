@@ -3,6 +3,7 @@ from youdao import YouDao
 import random
 import os
 import requests
+import re
 
 
 def trans(english_word):
@@ -29,6 +30,13 @@ if __name__ == '__main__':
     yd = YouDao()
     with open('source.txt') as file_object:
         words = (file_object.readlines())
+        with open('forget.md', 'r') as add_words:
+            lines = add_words.readlines()   
+            for line in lines:
+                word = re.findall(r'[a-z]+', line)
+                if word:
+                    words.append(word[0])
+        add_words.close()
         for index in range(0, len(words)):
             words[index] = words[index].replace('\n', '')
             yd.set_word(words[index])
@@ -37,11 +45,14 @@ if __name__ == '__main__':
             else:
                 yd.download()
     file_object.close()
-    with open("forget.md", 'a') as forget:
+    with open("forget.md", 'w') as forget:
+        forget.write('| CORRECT | TRANSLATION |\n')
+        forget.write('|:-------:|:-----------:|\n')
         print('Finish initializing and enjoy by yourself ^_____^')
         while len(words) != 0:
             index = random.randint(0, len(words) - 1)
             path = os.path.join(yd.get_dir(), words[index] + '.mp3')
+            print(words[index])
             try:
                 playsound(path)
             except UnicodeError:
