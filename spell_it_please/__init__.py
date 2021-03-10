@@ -37,10 +37,7 @@ if __name__ == '__main__':
             else:
                 yd.download()
     file_object.close()
-    with open("forget.md", 'w') as forget:
-        forget.write('|   CORRECT  |   MY    |\n')
-        forget.write('|:----------:|:-------:|\n')
-        print(forget)
+    with open("forget.md", 'a') as forget:
         print('Finish initializing and enjoy by yourself ^_____^')
         while len(words) != 0:
             index = random.randint(0, len(words) - 1)
@@ -59,4 +56,4 @@ if __name__ == '__main__':
                 forget.write('|' + words[index] + '|' + trans(words[index]) + '|\n')
             del words[index]
     forget.close()
-    playsound('victory.mp3')
+#     playsound('victory.mp3')
