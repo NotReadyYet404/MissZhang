@@ -56,4 +56,3 @@ if __name__ == '__main__':
                 forget.write('|' + words[index] + '|' + trans(words[index]) + '|\n')
             del words[index]
     forget.close()
-#     playsound('victory.mp3')
