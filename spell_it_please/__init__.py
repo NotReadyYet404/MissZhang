@@ -33,7 +33,7 @@ if __name__ == '__main__':
         with open('forget.md', 'r') as add_words:
             lines = add_words.readlines()   
             for line in lines:
-                word = re.findall(r'[a-z]+', line)
+                word = re.findall('[a-z]+', line)
                 if word:
                     words.append(word[0])
         add_words.close()
@@ -45,6 +45,7 @@ if __name__ == '__main__':
             else:
                 yd.download()
     file_object.close()
+    print(words)
     with open("forget.md", 'w') as forget:
         forget.write('| CORRECT | TRANSLATION |\n')
         forget.write('|:-------:|:-----------:|\n')
@@ -52,12 +53,12 @@ if __name__ == '__main__':
         while len(words) != 0:
             index = random.randint(0, len(words) - 1)
             path = os.path.join(yd.get_dir(), words[index] + '.mp3')
-            print(words[index])
             try:
                 playsound(path)
             except UnicodeError:
                 del words[index]
                 continue
+            word = ''
             word = input("If you forget, just 'x': ")
             if word == words[index]:
                 pass
