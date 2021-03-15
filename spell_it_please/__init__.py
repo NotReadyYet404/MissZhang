@@ -15,7 +15,7 @@ def trans(english_word):
     data = {
         'kw': english_word
     }
-    responce = requests.post(url=url, data=data, headers=headers)
+    responce = requests.post(url=url, data=data, headers=headers, timeout=1)
 
     obj = responce.json()
     # for a in obj['data']:
