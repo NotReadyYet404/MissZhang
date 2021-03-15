@@ -45,11 +45,11 @@ if __name__ == '__main__':
             else:
                 yd.download()
     file_object.close()
-    print(words)
     with open("forget.md", 'w') as forget:
         forget.write('| CORRECT | TRANSLATION |\n')
         forget.write('|:-------:|:-----------:|\n')
         print('Finish initializing and enjoy by yourself ^_____^')
+        i = 0
         while len(words) != 0:
             index = random.randint(0, len(words) - 1)
             path = os.path.join(yd.get_dir(), words[index] + '.mp3')
@@ -58,7 +58,6 @@ if __name__ == '__main__':
             except UnicodeError:
                 del words[index]
                 continue
-            word = ''
             word = input("If you forget, just 'x': ")
             if word == words[index]:
                 pass
@@ -67,4 +66,6 @@ if __name__ == '__main__':
             else:
                 forget.write('|' + words[index] + '|' + trans(words[index]) + '|\n')
             del words[index]
+            i = i + 1
+            print(i)
     forget.close()
