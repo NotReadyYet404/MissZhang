@@ -569,6 +569,85 @@
 |        narrate       |
 
 
+| <b id="12">List 12</b> |
+|:----------------------:|
+|         defend         |
+|         forbid         |
+|           fee          |
+|         edition        |
+|          tutor         |
+|         vanish         |
+|          grasp         |
+|        prohibit        |
+|        profound        |
+|        terminal        |
+|          scope         |
+|         modify         |
+|        feedback        |
+|       comparison       |
+|          sharp         |
+|          grace         |
+|           rid          |
+|        strength        |
+|        ignorant        |
+|          vote          |
+|         incline        |
+|         verify         |
+|          strip         |
+|       accordance       |
+|           bet          |
+|          drift         |
+|          spark         |
+|         proverb        |
+|        altitude        |
+|        appetite        |
+|         vacant         |
+|          ruin          |
+|       troublesome      |
+|          tight         |
+|         mission        |
+|        speculate       |
+|       participate      |
+|          fare          |
+|         welfare        |
+|       coordinate       |
+|        excessive       |
+|         assure         |
+|        striking        |
+|          drain         |
+|        worldwide       |
+|          myth          |
+|       expectation      |
+|          charm         |
+|        sensible        |
+|        addition        |
+|        quantify        |
+|       revolution       |
+|         motion         |
+|         pledge         |
+|        flourish        |
+|           bar          |
+|        transmit        |
+|        multiply        |
+|          frank         |
+|         awesome        |
+|       implication      |
+|         steady         |
+|         suburb         |
+|         insure         |
+|        grateful        |
+|          delay         |
+|          sake          |
+|          stale         |
+|         attack         |
+|        comprise        |
+|          hire          |
+|         virtual        |
+|         remedy         |
+|          axis          |
+|         recite         |
+
+
 | <b id="13">List 13</b> |
 |:----------------------:|
 |          huge          |
