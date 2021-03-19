@@ -44,8 +44,10 @@ class YouDao():
             self.set_url()
             try:
                 urllib.request.urlretrieve(self._url, filename=self._filePath)
+                return True
             except Exception:
-                print('Warning cannot download: ' + self._word)
+                print('Warning: cannot download: ' + self._word)
+                return False
 
         return self._filePath
 
