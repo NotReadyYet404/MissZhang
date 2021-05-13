@@ -34,9 +34,9 @@ if __name__ == '__main__':
         with open('forget.md', 'r') as add_words:
             lines = add_words.readlines()   
             for line in lines:
-                word = re.findall('[a-z]+', line)
+                word = re.search(r'\|\s*([a-z]+)\s*\|', line)
                 if word:
-                    words.append(word[0])
+                    words.append(word.group(1))
         add_words.close()
         for index in range(0, len(words)):
             yd.set_word(words[index])
