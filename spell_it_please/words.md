@@ -73,23 +73,23 @@
 |                hack                |
 |              threaten              |
 |               affect               |
-||
-|improve|
-|ambition|
-||
-|suffer|
-|attitude|
-|amount|
-|moral|
-|appeal|
-|establish|
-|observe|
-|project|
-|approach|
-|essential|
-|impact|
-|contribute|
-||
+|                                    |
+|               improve              |
+|              ambition              |
+|                                    |
+|               suffer               |
+|              attitude              |
+|               amount               |
+|                moral               |
+|               appeal               |
+|              establish             |
+|               observe              |
+|               project              |
+|              approach              |
+|              essential             |
+|               impact               |
+|             contribute             |
+|                                    |
 
 | <a href="#index" id="2">List 2</a> |
 |:----------------------------------:|

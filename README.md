@@ -1,9 +1,8 @@
 # MissZhang
-只是一个简单的程序，大部分代码还是抄别人的，这就敢传到Github实在是不知羞耻。但是我的脑子里还有很需求和想法。
-我打算长期完善它，希望它能帮助到更多的人。
+
 
 ## [Forget](./spell_it_please/forget.md)
-## [Words](./spell_it_please/words.md)
+## [Words](./spell_it_please/words-beta.md)
 ## Usage
 首先，你需要在你的python中安装playsound，它将用于播放单词的音频。可以直接使用pip安装：
 ```shell
