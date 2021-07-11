@@ -24,7 +24,7 @@ def trans(english_word):
 if __name__ == '__main__':
     print('Initializing....')
     yd = YouDao()
-    with open('source.txt', 'r') as file_object:
+    with open('./source.txt', 'r') as file_object:
         words = []
         lines = file_object.readlines()
         for line in lines:
