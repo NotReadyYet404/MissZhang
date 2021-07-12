@@ -3,7 +3,7 @@ import urllib.request
 
 
 class YouDao():
-    def __init__(self, type=0, word='hellow'):
+    def __init__(self, type=0, word=''):
         word = word.lower()
         self._type = type
         self._word = word
@@ -11,14 +11,14 @@ class YouDao():
         # file root
         self._dirRoot = os.path.dirname(os.path.abspath(__file__))
         if 0 == self._type:
-            self._dirSpeech = os.path.join(self._dirRoot, 'Speech_US')  # 美音库
+            self._dirSpeech = os.path.join(self._dirRoot, './Speech_US')  # 美音库
         else:
-            self._dirSpeech = os.path.join(self._dirRoot, 'Speech_EN')  # 英音库
+            self._dirSpeech = os.path.join(self._dirRoot, './Speech_EN')  # 英音库
 
-        if not os.path.exists('Speech_US'):
-            os.makedirs('Speech_US')
-        if not os.path.exists('Speech_EN'):
-            os.makedirs('Speech_EN')
+        if not os.path.exists('./Speech_US'):
+            os.makedirs('./Speech_US')
+        if not os.path.exists('./Speech_EN'):
+            os.makedirs('./Speech_EN')
 
     def set_word(self, word):
         self._word = word
@@ -27,9 +27,9 @@ class YouDao():
         self._type = type
 
         if 0 == self._type:
-            self._dirSpeech = os.path.join(self._dirRoot, 'Speech_US')  # 美音库
+            self._dirSpeech = os.path.join(self._dirRoot, './Speech_US')  # 美音库
         else:
-            self._dirSpeech = os.path.join(self._dirRoot, 'Speech_EN')  # 英音库
+            self._dirSpeech = os.path.join(self._dirRoot, './Speech_EN')  # 英音库
 
     def get_dir(self):
         return self._dirSpeech

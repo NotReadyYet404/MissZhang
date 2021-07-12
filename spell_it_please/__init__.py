@@ -24,14 +24,14 @@ def trans(english_word):
 if __name__ == '__main__':
     print('Initializing....')
     yd = YouDao()
-    with open('source.txt', 'r') as file_object:
+    with open('./source.txt', 'r') as file_object:
         words = []
         lines = file_object.readlines()
         for line in lines:
             word = re.findall('[a-z]+', line)
             if word:
                 words.append(word[0])
-        with open('forget.md', 'r') as add_words:
+        with open('./forget.md', 'r') as add_words:
             lines = add_words.readlines()   
             for line in lines:
                 word = re.search(r'\|\s*([a-z]+)\s*\|', line)
@@ -51,7 +51,7 @@ if __name__ == '__main__':
                     
     file_object.close()
 
-    with open("forget.md", 'w') as forget:
+    with open("./forget.md", 'w') as forget:
         forget.write('| CORRECT | TRANSLATION |\n')
         forget.write('|:-------:|:-----------:|\n')
         print('Finish initializing and enjoy by yourself ^_____^')
